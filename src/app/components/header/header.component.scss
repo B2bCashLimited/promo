@@ -1,0 +1,135 @@
+@import "src/app/styles/variables";
+@import "src/app/styles/mixins";
+.header {
+  background-color: #ffffff;
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #E5E5E5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  &--logo {
+    line-height: 1;
+    cursor: pointer;
+    >img {
+      height: 40px;
+    }
+    &-text {
+      font-weight: bold;
+      @include rem(35);
+    }
+    &-text>span {
+      color: $color-orange;
+    }
+    &-text-sub {
+      @include rem(8);
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+  }
+  .b2b-btn {
+    border-radius: 6px;
+    width: 100%;
+    box-shadow: none;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+    .ic-pencil {
+      width: 14px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.link-phone {
+  font-weight: 500;
+  line-height: 1;
+  @include rem(17);
+  color: #C7C7C7;
+  text-decoration: none;
+  white-space: nowrap;
+  .ic-phone {
+    width: 20px;
+    margin-right: 6px;
+    fill: #C7C7C7;
+  }
+  i {
+    font-style: normal;
+    font-weight: bold;
+    color: $color-orange;
+    @include rem(19);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .link-phone {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $color-orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .ic-phone {
+      fill: #ffffff;
+      margin-right: 0;
+    }
+    span {
+      display: none;
+    }
+  }
+  .header {
+    .b2b-btn {
+      border-radius: 50%;
+      width: 40px;
+      min-width: 40px;
+      height: 40px;
+      padding: 0;
+      &--text {
+        display: none;
+      }
+      .ic-pencil {
+        width: 18px;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .header {
+    &--logo {
+      line-height: 1;
+      cursor: pointer;
+      >img {
+        height: 36px;
+      }
+      &-text {
+        font-weight: bold;
+        @include rem(26);
+      }
+      &-text-sub {
+        @include rem(6);
+      }
+    }
+  }
+
+  :host {
+    .row {
+      margin-left: -5px;
+      margin-right: -5px;
+    }
+    .col,
+    [class*="col-"] {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+
+  .container{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

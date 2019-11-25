@@ -1,0 +1,160 @@
+// Font awesome fonts
+$fa-font-path: '../node_modules/font-awesome/fonts';
+@import "~bootstrap/scss/functions";
+@import "app/styles/scss/variables";
+@import "app/styles/variables";
+@import "app/styles/scss/theme";
+@import "~bootstrap/scss/bootstrap";
+// @import "~bootstrap/scss/variables";
+// @import "~bootstrap/scss/mixins";
+// @import "~bootstrap/scss/reboot";
+// @import "~bootstrap/scss/utilities";
+// @import "~bootstrap/scss/print";
+// @import "~bootstrap/scss/type";
+// @import "~bootstrap/scss/images";
+// @import "~bootstrap/scss/code";
+// @import "~bootstrap/scss/grid";
+// @import "~bootstrap/scss/tables";
+// @import "~bootstrap/scss/forms";
+// @import "~bootstrap/scss/buttons";
+// @import "~bootstrap/scss/transitions";
+// @import "~bootstrap/scss/dropdown";
+// @import "~bootstrap/scss/button-group";
+// @import "~bootstrap/scss/input-group";
+// @import "~bootstrap/scss/custom-forms";
+// @import "~bootstrap/scss/nav";
+// @import "~bootstrap/scss/navbar";
+// @import "~bootstrap/scss/card";
+// @import "~bootstrap/scss/breadcrumb";
+// @import "~bootstrap/scss/pagination";
+// @import "~bootstrap/scss/badge";
+// @import "~bootstrap/scss/jumbotron";
+// @import "~bootstrap/scss/alert";
+// @import "~bootstrap/scss/progress";
+// @import "~bootstrap/scss/media";
+// @import "~bootstrap/scss/list-group";
+// @import "~bootstrap/scss/close";
+// @import "~bootstrap/scss/modal";
+// @import "~bootstrap/scss/tooltip";
+// @import "~bootstrap/scss/popover";
+// @import "~bootstrap/scss/carousel";
+// @import "app/styles/scss/tree";
+// @import "app/styles/scss/glabal";
+// @import "app/styles/scss/def";
+// @import "app/styles/scss/dataRange";
+// @import "app/styles/common";
+// @import "app/styles/flags";
+// @import "app/styles/form";
+[hidden] {
+  display: none !important;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: $default-font-family;
+}
+
+.b2b-bg-image {
+  // background: url('assets/img/home/map-new.svg') no-repeat fixed top center;
+  background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: $default-font-family;
+}
+
+*{
+  outline: none;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+div.cdk-overlay-pane {
+  width: auto !important;
+  max-width: 320px;
+}
+
+.mat-tooltip {
+  max-width: 230px !important;
+  background: rgba(0, 0, 0, 0.7) !important;
+  border-radius: 5px !important;
+  text-align: center !important;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+  font-size: 13px;
+  color: #FFFFFF;
+}
+
+button {
+  &.mat-accent {
+    &:hover {
+      background: #E86703;
+    }
+  }
+}
+
+.mat-select-value-text {
+  font-family: $default-font-family !important;
+}
+
+img {
+  font-size: 10px;
+  line-height: 1;
+}
+
+.cdk-overlay-container {
+  z-index: 9999999;
+}
+
+.b2b-btn {
+  background-color: $color-orange;
+  box-shadow: none !important;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  height: 40px;
+  min-width: 105px;
+  color: #ffffff;
+  border-radius: 10px;
+  position: relative;
+  transition: .25s cubic-bezier(0.4, 0, 1, 1);
+  text-decoration: none;
+  &:hover {
+    background: $color-hover-orange;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  ::ng-deep.mat-button-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &--large {
+    height: 70px;
+    border-radius: 6px;
+    min-width: 300px;
+    font-size: 1.875rem;
+    transform: scale(1);
+    &:hover {
+      background: $color-orange;
+      transform: scale(1.143);
+    }
+  }
+}

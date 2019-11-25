@@ -1,0 +1,40 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "paths": {
+      "@b2b/environments/*": [
+        "src/environments/*"
+      ],
+      "@b2b/services/*": [
+        "src/app/core/services/*"
+      ],
+      "@b2b/directives/*": [
+        "src/app/core/directives/*"
+      ],
+      "@b2b/components/*": [
+        "src/app/components/*"
+      ],
+      "@b2b/shared/*": [
+        "src/app/shared/*"
+      ]
+    },
+    "sourceMap": true,
+    "declaration": false,
+    "module": "esNext",
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ]
+  }
+}

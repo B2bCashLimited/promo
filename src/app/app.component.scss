@@ -1,0 +1,14 @@
+@import "src/app/styles/variables";
+body {
+  font-family: $default-font-family;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}

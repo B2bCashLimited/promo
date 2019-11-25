@@ -1,0 +1,325 @@
+<div class="b-tab-steps">
+  <h3 class="title-h3">
+    Чтобы начать, совершите <span>{{type === 'person' ? 4 : 5}}</span> простых {{type === 'person' ? 'шага' : 'шагов'}}
+  </h3>
+
+  <mat-horizontal-stepper labelPosition="bottom" (selectionChange)="selectionChange($event)">
+    <mat-step>
+      <div class="row justify-content-center b-step-1">
+        <div class="col-xl-10">
+          <div class="b-steps-content--item">
+            <div class="row">
+              <div class="col-xl-5 col-lg-6 col-md-5 d-flex align-items-center justify-content-center">
+                <div class="e-image"></div>
+              </div>
+              <div class="col-xl-7 col-lg-6 col-md-7">
+                <ul class="b-list">
+                  <li>
+                    Зарегистрируйтесь на площадке <span class="color-orange">B2B.Cash</span>.
+                    Это отнимет у вас не более 3 минут.
+                  </li>
+                  <li>
+                    Перейдите по ссылке, которую мы пришлем Вам для активации аккаунта.
+                  </li>
+                </ul>
+                <div class="b-wrap-btn d-flex">
+                  <a [href]="regUrl" target="_blank"
+                    gtagEvent
+                    trackOn="send"
+                    action="click"
+                    category="button"
+                    appYandexReachGoal="registration_button" class="link-reg">
+                    {{'header.navRegistration' | translate}} <sup>
+                      <svg class="ic-reg" width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0)">
+                          <path d="M9.02886 2.81892H0.697488C0.312213 2.81892 0 3.07748 0 3.39692V9.18577C0 9.5044 0.312213 9.76458 0.697488 9.76458H9.02886C9.41121 9.76458 9.72342 9.5044 9.72342 9.18577V3.39692C9.72342 3.07748 9.41121 2.81892 9.02886 2.81892ZM9.02886 9.18577H0.697488V4.27283H9.02886V9.18577Z" />
+                          <path d="M11.3045 0.235413H2.97212C2.58734 0.235413 2.27756 0.493967 2.27756 0.814217V2.49177H2.97212V1.68932H11.3045V6.60226H10.0951V7.18106H11.3045C11.6873 7.18106 12 6.92089 12 6.60226V0.814217C12 0.493967 11.6873 0.235413 11.3045 0.235413Z" />
+                        </g>
+                      </svg>
+                    </sup>
+                  </a>
+                  <button class="b2b-btn" mat-raised-button matStepperNext color="accent">Далее</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-step>
+    <mat-step>
+      <div class="row justify-content-center b-step-2">
+        <div class="col-xl-10">
+          <div class="b-steps-content--item">
+            <div class="row">
+              <div class="col-xl-5 col-lg-6 col-md-5 d-flex align-items-center justify-content-center">
+                <div class="e-image">
+                  <div class="e-image--slide">
+                    <img class="" src="/assets/img/img-window-1.png">
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-7 col-lg-6 col-md-7">
+                <ul class="b-list">
+                  <li>
+                    <a class="font-weight-bold color-orange" (click)="playVideo(video.c2)">
+                      <svg class="ic-video" width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.7241 0H0.275862C0.123586 0 0 0.126326 0 0.282609V12.7174C0 12.8737 0.123586 13 0.275862 13H15.7241C15.8764 13 16 12.8737 16 12.7174V0.282609C16 0.126326 15.8764 0 15.7241 0ZM2.75862 12.4348H0.551724V9.8913H2.75862V12.4348ZM2.75862 9.32609H0.551724V6.78261H2.75862V9.32609ZM2.75862 6.21739H0.551724V3.67391H2.75862V6.21739ZM2.75862 3.1087H0.551724V0.565217H2.75862V3.1087ZM10.0792 6.73852L7.04469 8.71678C6.99972 8.74589 6.94814 8.76087 6.89655 8.76087C6.85076 8.76087 6.80524 8.74928 6.76386 8.72611C6.67559 8.67637 6.62069 8.58141 6.62069 8.47826V4.52174C6.62069 4.41859 6.67559 4.32363 6.76386 4.27389C6.85214 4.22443 6.95972 4.22811 7.04497 4.28322L10.0794 6.26148C10.1586 6.31348 10.2069 6.40335 10.2069 6.5C10.2069 6.59665 10.1586 6.68652 10.0792 6.73852ZM15.4483 12.4348H13.2414V9.8913H15.4483V12.4348ZM15.4483 9.32609H13.2414V6.78261H15.4483V9.32609ZM15.4483 6.21739H13.2414V3.67391H15.4483V6.21739ZM15.4483 3.1087H13.2414V0.565217H15.4483V3.1087Z" />
+                      </svg>
+                      Создайте
+                    </a>
+                    компанию для ведения бизнеса.
+                  </li>
+                  <li>
+                    В течение 5-10 минут наши менеджеры проверят информацию, и компания станет активной на
+                    площадке.
+                  </li>
+                </ul>
+                <div class="b-wrap-btn d-flex">
+                  <button class="b2b-btn" matStepperNext mat-raised-button color="accent">Далее</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-step>
+
+    <ng-template [ngIf]="type === 'person'">
+      <mat-step>
+        <div class="row justify-content-center b-step-3">
+          <div class="col-xl-10">
+            <div class="b-steps-content--item">
+              <div class="row">
+                <div class="col-xl-5 col-lg-6 col-md-5 d-flex align-items-center justify-content-center">
+                  <div class="e-image">
+                    <div class="slider e-image--slide" #stepC3>
+                      <img class="slide-item active" src="/assets/img/img-window-2.png">
+                      <img class="slide-item" src="/assets/img/img-window-3.png">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-7 col-lg-6 col-md-7">
+                  <ul class="b-list">
+                    <li>
+                      <a class="font-weight-bold color-orange" (click)="playVideo(video.c3_1)">
+                        <svg class="ic-video" width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M15.7241 0H0.275862C0.123586 0 0 0.126326 0 0.282609V12.7174C0 12.8737 0.123586 13 0.275862 13H15.7241C15.8764 13 16 12.8737 16 12.7174V0.282609C16 0.126326 15.8764 0 15.7241 0ZM2.75862 12.4348H0.551724V9.8913H2.75862V12.4348ZM2.75862 9.32609H0.551724V6.78261H2.75862V9.32609ZM2.75862 6.21739H0.551724V3.67391H2.75862V6.21739ZM2.75862 3.1087H0.551724V0.565217H2.75862V3.1087ZM10.0792 6.73852L7.04469 8.71678C6.99972 8.74589 6.94814 8.76087 6.89655 8.76087C6.85076 8.76087 6.80524 8.74928 6.76386 8.72611C6.67559 8.67637 6.62069 8.58141 6.62069 8.47826V4.52174C6.62069 4.41859 6.67559 4.32363 6.76386 4.27389C6.85214 4.22443 6.95972 4.22811 7.04497 4.28322L10.0794 6.26148C10.1586 6.31348 10.2069 6.40335 10.2069 6.5C10.2069 6.59665 10.1586 6.68652 10.0792 6.73852ZM15.4483 12.4348H13.2414V9.8913H15.4483V12.4348ZM15.4483 9.32609H13.2414V6.78261H15.4483V9.32609ZM15.4483 6.21739H13.2414V3.67391H15.4483V6.21739ZM15.4483 3.1087H13.2414V0.565217H15.4483V3.1087Z" />
+                        </svg>
+                        Создайте заказ</a>, укажите все необходимые характеристики, способ оплаты и получите самое
+                      выгодное предложение от продавцов.
+                    </li>
+                    <li>
+                      Либо выберите лучшего поставщика сами.
+                      Вы легко <a class="font-weight-bold color-orange" (click)="playVideo(video.c3_2)">
+                        <svg class="ic-video" width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M15.7241 0H0.275862C0.123586 0 0 0.126326 0 0.282609V12.7174C0 12.8737 0.123586 13 0.275862 13H15.7241C15.8764 13 16 12.8737 16 12.7174V0.282609C16 0.126326 15.8764 0 15.7241 0ZM2.75862 12.4348H0.551724V9.8913H2.75862V12.4348ZM2.75862 9.32609H0.551724V6.78261H2.75862V9.32609ZM2.75862 6.21739H0.551724V3.67391H2.75862V6.21739ZM2.75862 3.1087H0.551724V0.565217H2.75862V3.1087ZM10.0792 6.73852L7.04469 8.71678C6.99972 8.74589 6.94814 8.76087 6.89655 8.76087C6.85076 8.76087 6.80524 8.74928 6.76386 8.72611C6.67559 8.67637 6.62069 8.58141 6.62069 8.47826V4.52174C6.62069 4.41859 6.67559 4.32363 6.76386 4.27389C6.85214 4.22443 6.95972 4.22811 7.04497 4.28322L10.0794 6.26148C10.1586 6.31348 10.2069 6.40335 10.2069 6.5C10.2069 6.59665 10.1586 6.68652 10.0792 6.73852ZM15.4483 12.4348H13.2414V9.8913H15.4483V12.4348ZM15.4483 9.32609H13.2414V6.78261H15.4483V9.32609ZM15.4483 6.21739H13.2414V3.67391H15.4483V6.21739ZM15.4483 3.1087H13.2414V0.565217H15.4483V3.1087Z" />
+                        </svg>
+                        найдете
+                      </a>
+                      все товары и услуги с их подробными характеристиками через умный поиск.
+                    </li>
+                  </ul>
+                  <div class="b-wrap-btn d-flex">
+                    <button class="b2b-btn" matStepperNext mat-raised-button color="accent">Далее</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-step>
+      <mat-step>
+        <div class="row justify-content-center b-step-4">
+          <div class="col-xl-10">
+            <div class="b-steps-content--item">
+              <div class="row">
+                <div class="col-xl-5 col-lg-6 col-md-5 d-flex align-items-center justify-content-center">
+                  <div class="e-image">
+                    <div class="e-image--slide" #stepC4>
+                      <img class="slide-item active" src="/assets/img/img-window-4.png">
+                      <img class="slide-item" src="/assets/img/img-window-5.png">
+                      <img class="slide-item" src="/assets/img/img-window-6.png">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-7 col-lg-6 col-md-7">
+                  <ul class="b-list">
+                    <li>
+                      Поставщики товаров и услуг увидят ваш заказ и
+                      <a class="font-weight-bold color-orange" (click)="playVideo(video.c4)">
+                        <svg class="ic-video" width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M15.7241 0H0.275862C0.123586 0 0 0.126326 0 0.282609V12.7174C0 12.8737 0.123586 13 0.275862 13H15.7241C15.8764 13 16 12.8737 16 12.7174V0.282609C16 0.126326 15.8764 0 15.7241 0ZM2.75862 12.4348H0.551724V9.8913H2.75862V12.4348ZM2.75862 9.32609H0.551724V6.78261H2.75862V9.32609ZM2.75862 6.21739H0.551724V3.67391H2.75862V6.21739ZM2.75862 3.1087H0.551724V0.565217H2.75862V3.1087ZM10.0792 6.73852L7.04469 8.71678C6.99972 8.74589 6.94814 8.76087 6.89655 8.76087C6.85076 8.76087 6.80524 8.74928 6.76386 8.72611C6.67559 8.67637 6.62069 8.58141 6.62069 8.47826V4.52174C6.62069 4.41859 6.67559 4.32363 6.76386 4.27389C6.85214 4.22443 6.95972 4.22811 7.04497 4.28322L10.0794 6.26148C10.1586 6.31348 10.2069 6.40335 10.2069 6.5C10.2069 6.59665 10.1586 6.68652 10.0792 6.73852ZM15.4483 12.4348H13.2414V9.8913H15.4483V12.4348ZM15.4483 9.32609H13.2414V6.78261H15.4483V9.32609ZM15.4483 6.21739H13.2414V3.67391H15.4483V6.21739ZM15.4483 3.1087H13.2414V0.565217H15.4483V3.1087Z" />
+                        </svg>
+                        направят</a> вам выгодные предложения.
+                    </li>
+                    <li>
+                      Также вы можете предложить поставщику свою цену и обсудить условия сделки прямо на площадке.
+                    </li>
+                  </ul>
+                  <div class="b-wrap-btn d-flex">
+                    <a [href]="regUrl" target="_blank"
+                      gtagEvent
+                      trackOn="send"
+                      action="click"
+                      category="button"
+                      appYandexReachGoal="registration_button"
+                      class="b2b-btn" mat-raised-button color="accent">
+                      Зарегистрироваться
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-step>
+    </ng-template>
+
+    <ng-template [ngIf]="type === 'supplier'">
+      <mat-step>
+        <div class="row justify-content-center b-step-3">
+          <div class="col-xl-10">
+            <div class="b-steps-content--item">
+              <div class="row">
+                <div class="col-xl-5 col-lg-6 col-md-5 d-flex align-items-center justify-content-center">
+                  <div class="e-image slider" #stepS3>
+
+                    <div class="slide-item e-image--slide-wrap active">
+                      <img class="img-provider" src="/assets/img/svg-icons/provider.svg">
+                      <img class="img-factory" src="/assets/img/svg-icons/factory.svg">
+                      <img class="ic-ok-1" src="/assets/img/svg-icons/ok.svg">
+                      <img class="ic-ok-2" src="/assets/img/svg-icons/ok.svg">
+                    </div>
+
+                    <div class="slide-item e-image--slide-wrap">
+                      <img class="img-lorry" src="/assets/img/svg-icons/lorry.svg">
+                      <img class="img-plane" src="/assets/img/svg-icons/plane.svg">
+                      <img class="img-rails" src="/assets/img/svg-icons/rails.svg">
+                      <img class="img-ship" src="/assets/img/svg-icons/ship.svg">
+                      <img class="ic-ok-3" src="/assets/img/svg-icons/ok.svg">
+                      <img class="ic-ok-4" src="/assets/img/svg-icons/ok.svg">
+                      <img class="ic-ok-5" src="/assets/img/svg-icons/ok.svg">
+                      <img class="ic-ok-6" src="/assets/img/svg-icons/ok.svg">
+                    </div>
+
+                    <div class="slide-item e-image--slide-wrap">
+                      <img class="img-customs-license" src="/assets/img/svg-icons/customs-license.svg">
+                      <img class="img-customs" src="/assets/img/svg-icons/customs.svg">
+                      <img class="ic-ok-7" src="/assets/img/svg-icons/ok.svg">
+                      <img class="ic-ok-8" src="/assets/img/svg-icons/ok.svg">
+                    </div>
+
+                  </div>
+                </div>
+                <div class="col-xl-7 col-lg-6 col-md-7">
+                  <ul class="b-list">
+                    <li>
+                      <a class="font-weight-bold color-orange" (click)="playVideo(video.s3)">
+                        <svg class="ic-video" width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M15.7241 0H0.275862C0.123586 0 0 0.126326 0 0.282609V12.7174C0 12.8737 0.123586 13 0.275862 13H15.7241C15.8764 13 16 12.8737 16 12.7174V0.282609C16 0.126326 15.8764 0 15.7241 0ZM2.75862 12.4348H0.551724V9.8913H2.75862V12.4348ZM2.75862 9.32609H0.551724V6.78261H2.75862V9.32609ZM2.75862 6.21739H0.551724V3.67391H2.75862V6.21739ZM2.75862 3.1087H0.551724V0.565217H2.75862V3.1087ZM10.0792 6.73852L7.04469 8.71678C6.99972 8.74589 6.94814 8.76087 6.89655 8.76087C6.85076 8.76087 6.80524 8.74928 6.76386 8.72611C6.67559 8.67637 6.62069 8.58141 6.62069 8.47826V4.52174C6.62069 4.41859 6.67559 4.32363 6.76386 4.27389C6.85214 4.22443 6.95972 4.22811 7.04497 4.28322L10.0794 6.26148C10.1586 6.31348 10.2069 6.40335 10.2069 6.5C10.2069 6.59665 10.1586 6.68652 10.0792 6.73852ZM15.4483 12.4348H13.2414V9.8913H15.4483V12.4348ZM15.4483 9.32609H13.2414V6.78261H15.4483V9.32609ZM15.4483 6.21739H13.2414V3.67391H15.4483V6.21739ZM15.4483 3.1087H13.2414V0.565217H15.4483V3.1087Z" />
+                        </svg>
+                        Добавьте</a> вид деятельности своей компании: поставщик, перевозчик или таможенный
+                      представитель. Пройдите быструю модерацию.
+                    </li>
+                    <li>
+                      Начинайте зарабатывать.
+                    </li>
+                  </ul>
+                  <div class="b-wrap-btn d-flex">
+                    <button class="b2b-btn" matStepperNext mat-raised-button color="accent">Далее</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-step>
+      <mat-step>
+        <div class="row justify-content-center b-step-4">
+          <div class="col-xl-10">
+            <div class="b-steps-content--item">
+              <div class="row">
+                <div class="col-xl-5 col-lg-6 col-md-5 d-flex align-items-center justify-content-center">
+                  <div class="e-image">
+                    <div class="e-image--slide slider" #stepS4>
+                      <img class="slide-item active" src="/assets/img/img-window-2.png">
+                      <img class="slide-item" src="/assets/img/img-window-7.png">
+                      <img class="slide-item" src="/assets/img/img-window-8.png">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-7 col-lg-6 col-md-7">
+                  <ul class="b-list">
+                    <li>
+                      Размещайте свои
+                      <a class="font-weight-bold color-orange" (click)="playVideo(video.s4_1)">
+                        <svg class="ic-video" width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M15.7241 0H0.275862C0.123586 0 0 0.126326 0 0.282609V12.7174C0 12.8737 0.123586 13 0.275862 13H15.7241C15.8764 13 16 12.8737 16 12.7174V0.282609C16 0.126326 15.8764 0 15.7241 0ZM2.75862 12.4348H0.551724V9.8913H2.75862V12.4348ZM2.75862 9.32609H0.551724V6.78261H2.75862V9.32609ZM2.75862 6.21739H0.551724V3.67391H2.75862V6.21739ZM2.75862 3.1087H0.551724V0.565217H2.75862V3.1087ZM10.0792 6.73852L7.04469 8.71678C6.99972 8.74589 6.94814 8.76087 6.89655 8.76087C6.85076 8.76087 6.80524 8.74928 6.76386 8.72611C6.67559 8.67637 6.62069 8.58141 6.62069 8.47826V4.52174C6.62069 4.41859 6.67559 4.32363 6.76386 4.27389C6.85214 4.22443 6.95972 4.22811 7.04497 4.28322L10.0794 6.26148C10.1586 6.31348 10.2069 6.40335 10.2069 6.5C10.2069 6.59665 10.1586 6.68652 10.0792 6.73852ZM15.4483 12.4348H13.2414V9.8913H15.4483V12.4348ZM15.4483 9.32609H13.2414V6.78261H15.4483V9.32609ZM15.4483 6.21739H13.2414V3.67391H15.4483V6.21739ZM15.4483 3.1087H13.2414V0.565217H15.4483V3.1087Z" />
+                        </svg>
+                        товары</a> и
+                      <a class="font-weight-bold color-orange" (click)="playVideo(video.s4_2)">
+                        <svg class="ic-video" width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M15.7241 0H0.275862C0.123586 0 0 0.126326 0 0.282609V12.7174C0 12.8737 0.123586 13 0.275862 13H15.7241C15.8764 13 16 12.8737 16 12.7174V0.282609C16 0.126326 15.8764 0 15.7241 0ZM2.75862 12.4348H0.551724V9.8913H2.75862V12.4348ZM2.75862 9.32609H0.551724V6.78261H2.75862V9.32609ZM2.75862 6.21739H0.551724V3.67391H2.75862V6.21739ZM2.75862 3.1087H0.551724V0.565217H2.75862V3.1087ZM10.0792 6.73852L7.04469 8.71678C6.99972 8.74589 6.94814 8.76087 6.89655 8.76087C6.85076 8.76087 6.80524 8.74928 6.76386 8.72611C6.67559 8.67637 6.62069 8.58141 6.62069 8.47826V4.52174C6.62069 4.41859 6.67559 4.32363 6.76386 4.27389C6.85214 4.22443 6.95972 4.22811 7.04497 4.28322L10.0794 6.26148C10.1586 6.31348 10.2069 6.40335 10.2069 6.5C10.2069 6.59665 10.1586 6.68652 10.0792 6.73852ZM15.4483 12.4348H13.2414V9.8913H15.4483V12.4348ZM15.4483 9.32609H13.2414V6.78261H15.4483V9.32609ZM15.4483 6.21739H13.2414V3.67391H15.4483V6.21739ZM15.4483 3.1087H13.2414V0.565217H15.4483V3.1087Z" />
+                        </svg>
+                        услуги</a> на площадке и получайте на них заказы от клиентов.
+                    </li>
+                    <li>
+                      Либо отправляйте свои предложения по уже сформированным клиентами заказам.
+                    </li>
+                  </ul>
+                  <div class="b-wrap-btn d-flex">
+                    <button class="b2b-btn" matStepperNext mat-raised-button color="accent">Далее</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-step>
+      <mat-step>
+        <div class="row justify-content-center b-step-5">
+          <div class="col-xl-10">
+            <div class="b-steps-content--item">
+              <div class="row">
+                <div class="col-xl-5 col-lg-6 col-md-5 d-flex align-items-center justify-content-center">
+                  <div class="e-image">
+                    <div class="e-image--slide" #stepS5>
+                      <img class="slide-item active" src="/assets/img/img-window-4.png">
+                      <img class="slide-item" src="/assets/img/img-window-5.png">
+                      <img class="slide-item" src="/assets/img/img-window-6.png">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-7 col-lg-6 col-md-7">
+                  <ul class="b-list">
+                    <li>
+                      <a class="font-weight-bold color-orange" (click)="playVideo(video.s5)">
+                        <svg class="ic-video" width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M15.7241 0H0.275862C0.123586 0 0 0.126326 0 0.282609V12.7174C0 12.8737 0.123586 13 0.275862 13H15.7241C15.8764 13 16 12.8737 16 12.7174V0.282609C16 0.126326 15.8764 0 15.7241 0ZM2.75862 12.4348H0.551724V9.8913H2.75862V12.4348ZM2.75862 9.32609H0.551724V6.78261H2.75862V9.32609ZM2.75862 6.21739H0.551724V3.67391H2.75862V6.21739ZM2.75862 3.1087H0.551724V0.565217H2.75862V3.1087ZM10.0792 6.73852L7.04469 8.71678C6.99972 8.74589 6.94814 8.76087 6.89655 8.76087C6.85076 8.76087 6.80524 8.74928 6.76386 8.72611C6.67559 8.67637 6.62069 8.58141 6.62069 8.47826V4.52174C6.62069 4.41859 6.67559 4.32363 6.76386 4.27389C6.85214 4.22443 6.95972 4.22811 7.04497 4.28322L10.0794 6.26148C10.1586 6.31348 10.2069 6.40335 10.2069 6.5C10.2069 6.59665 10.1586 6.68652 10.0792 6.73852ZM15.4483 12.4348H13.2414V9.8913H15.4483V12.4348ZM15.4483 9.32609H13.2414V6.78261H15.4483V9.32609ZM15.4483 6.21739H13.2414V3.67391H15.4483V6.21739ZM15.4483 3.1087H13.2414V0.565217H15.4483V3.1087Z" />
+                        </svg>
+                        Находим</a> клиентские заказы и делаем предложения.
+                    </li>
+                    <li>
+                      Обсуждайте дополнительные условия сделки с клиентами в чате.
+                    </li>
+                  </ul>
+                  <div class="b-wrap-btn d-flex">
+                    <a [href]="regUrl" target="_blank"
+                      gtagEvent
+                      trackOn="send"
+                      action="click"
+                      category="button"
+                      appYandexReachGoal="registration_button"
+                      class="b2b-btn" mat-raised-button color="accent">
+                      Зарегистрироваться
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-step>
+    </ng-template>
+  </mat-horizontal-stepper>
+</div>

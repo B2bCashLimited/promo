@@ -1,0 +1,99 @@
+<section class="page-1">
+  <div class="container text-center h-100">
+    <div class="d-table w-100 h-100">
+      <div class="d-table-cell align-middle w-100">
+        <h1 class="title-h1 fadeInDownBig animated">
+          <a [href]="regUrl" target="_blank"
+            gtagEvent
+            trackOn="send"
+            action="click"
+            category="button"
+            appYandexReachGoal="registration_button">B2B.<span>CASH</span></a>
+        </h1>
+        <h2 class="title-h2 fadeInLeft animated">Товары, Перевозки, Таможенные услуги</h2>
+        <h4 class="title-h4 fadeInRight animated">на <span>одной</span> торговой площадке</h4>
+        <div class="d-flex justify-content-center fadeInUpBig animated">
+          <div class="b-play" (click)="playVideo()">
+            <div class="b-play--btn d-flex align-items-center justify-content-center">
+              <img class="w-100" src="/assets/img/svg-icons/youtube.svg">
+            </div>
+            <div class="b-play--text">смотреть видео</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page-2" id="page2" #page2>
+  <div class="container">
+    <h2 class="title-h2 fadeInDown animated ">Кем <span>Вы</span> являетесь?</h2>
+
+    <mat-tab-group [disableRipple]="true">
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <div class="b-tabs b-tabs--person b-tabs-label">
+            <img class="" src="/assets/img/person.png">
+            <div class="b-oval"></div>
+            <div class="b-tabs--name">Покупатель</div>
+          </div>
+        </ng-template>
+        <div class="b-tabs-content content-person">
+          <div class="row justify-content-center">
+            <div class="col-xl-8 col-lg-9 color-default">
+              <div class="text-center fz-17 mb-1 ">
+                Хотите торговать по всему миру? Работать на платформе, где воедино собраны крупнооптовые импортеры,
+                заводы-изготовители, таможенные брокеры и грузоперевозчики? Иметь возможность в несколько кликов
+                купить товар по самой выгодной цене, растаможить и построить маршрут его доставки?
+              </div>
+              <div class="text-center fz-19 font-weight-bold">Вы попали по адресу!</div>
+            </div>
+          </div>
+          <app-wizard [type]="'person'"></app-wizard>
+        </div>
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <div class="b-tabs b-tabs--suppliers b-tabs-label">
+            <img class="" src="/assets/img/suppliers.png">
+            <div class="b-oval"></div>
+            <div class="b-tabs--name">Поставщик услуг</div>
+          </div>
+        </ng-template>
+        <div class="b-tabs-content content-suppliers">
+          <div class="row justify-content-center">
+            <div class="col-xl-8 col-lg-9 color-default">
+              <div class="text-center fz-17">Продавайте свои товары и услуги по всему миру.</div>
+              <div class="text-center fz-17 mb-1">
+                Увеличивайте прибыль, сокращайте расходы и время. Пользуйтесь умными интерфейсами и инновационными бизнес
+                моделями.
+              </div>
+              <div class="text-center fz-19 font-weight-bold">Все это вы найдете на платформе B2B.CASH.</div>
+            </div>
+          </div>
+          <app-wizard [type]="'supplier'"></app-wizard>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</section>
+
+<section class="page-3">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-10 d-flex flex-wrap justify-content-center">
+        <h5 class="title-h5 w-100">Выбирайте лучшее решение для бизнеса</h5>
+        <h5 class="title-h5 w-100 font-weight-bold">Бесплатная международная торговая  площадка для юридических лиц</h5>
+        <button (click)="goToRegistration()"
+          gtagEvent
+          trackOn="send"
+          action="click"
+          category="button"
+          appYandexReachGoal="registration_button"
+          class="b2b-btn b2b-btn--large" mat-raised-button color="accent">
+          {{'header.navRegistration' | translate}}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

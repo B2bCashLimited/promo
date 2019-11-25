@@ -1,0 +1,8 @@
+<h2 mat-dialog-title class="text-right mb-0"><i class="fa fa-times btn" (click)="close()"></i></h2>
+<youtube-player
+  [videoId]="data.id"
+  [height]="screenHeight"
+  [width]="screenWidth"
+  (ready)="savePlayer($event)"
+  (change)="onStateChange($event)"
+></youtube-player>
